@@ -1,0 +1,19 @@
+{
+  "warnings": {
+    "UNSUPPORTED_SERVICE": "The patient requested a service that this clinic does not offer (e.g. CoolSculpting). The system will automatically escalate this message to a human operator to suggest alternative treatments.",
+    "PROVIDER_SPECIALTY_MISMATCH": "The selected provider does not specialize in the requested service. Choose a provider with the correct specialty certification, or proceed with override justification.",
+    "CONCURRENCY_CONFLICT": "Another booking has been made for the same provider at the same time. Select another slot or resolve the schedule override.",
+    "DO_NOT_BOOK": "The patient has been marked 'Do Not Book' in the CRM system due to a clinical restriction or administrative notes. Bypassing this requires manager approval."
+  },
+  "platform_guidelines": {
+    "confidence_score": "The confidence score measures how closely the incoming request matches standard booking rules. Factors include: 1. Clarity of the patient request intent (scheduling vs query), 2. Entity parser score (detecting date, time, and service cleanly), 3. Schedule match (no overlaps), 4. Specialty validation (provider is certified).",
+    "how_to_approve": "To approve a booking, review the recommended candidate slot on the right-hand panel. Click 'Approve Proposal' to save it. If you need to make changes, customize the provider or time inline, type an override reason, and then click 'Approve Proposal'.",
+    "after_approval": "After approval, the system: 1. Commits the appointment to the database, 2. Generates a PDF invoice receipt in the background, 3. Dispatches confirmation emails and SMS to the patient, 4. Sends a calendar .ics invite to both patient and provider.",
+    "candidate_ranking": "Candidate slots are ranked by: 1. Patient provider preference (VIP match), 2. Provider daily utilization (prefers packing appointments tightly to avoid gaps), 3. Alignment with patient's preferred time of day (morning vs afternoon)."
+  },
+  "procedures": {
+    "botox": "Botox treatments take 15-30 minutes. Price is $15 per unit. Typical appointments take 30 minutes total.",
+    "lip_filler": "Lip Filler treatments use dermal fillers (Juvederm/Restylane). Duration is 60 minutes. Price is $650 per syringe.",
+    "prp": "Platelet-Rich Plasma (PRP) facial treatments take 60 minutes. Price is $700 per treatment."
+  }
+}

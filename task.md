@@ -1,0 +1,24 @@
+# Refactoring Implementation Tasks
+
+- `[x]` **Phase 1: Core Architecture & Domain Modeling**
+    - `[x]` Create `app/domain/models.py` (Patient, Provider, Service, Appointment, CandidateSlot)
+    - `[x]` Create `app/domain/context.py` (RequestContext, EventStream)
+    - `[x]` Create `app/domain/decision.py` (DecisionContext)
+    - `[x]` Update `app/config.py` for Feature Flags
+- `[x]` **Phase 2: Pipeline Separation & Orchestration**
+    - `[x]` Create `app/orchestrator.py` (DecisionOrchestrator)
+    - `[x]` Refactor `app/intent_router.py` & `app/entity_extractor.py` (AI Pipeline)
+    - `[x]` Refactor `app/business_rules.py` & `app/calendar_math.py` & `app/slot_ranker.py` (Business Pipeline)
+    - `[x]` Refactor `app/main.py` to invoke Orchestrator
+- `[x]` **Phase 3: Enhanced Telemetry & Human Feedback Loop**
+    - `[x]` Implement robust event logging in `DecisionContext`
+    - `[x]` Refactor override mechanism to record diffs in `/api/confirm`
+- `[x]` **Phase 4: Frontend Polish & Explainability Engine**
+    - `[x]` Update `DecideResponse` schema and Next.js frontend state to match new `EventStream`
+    - `[x]` Add Confidence Progress Bar
+    - `[x]` Add Star-Rated Candidate Slots
+    - `[x]` Implement Live Animating Timeline
+    - `[x]` Build Explainability Engine UI Panel
+- `[x]` **Phase 5: Final Documentation**
+    - `[x]` Write `README.md`
+    - `[x]` Write `WRITEUP.md`

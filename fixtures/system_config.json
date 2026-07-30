@@ -1,0 +1,10 @@
+{
+  "confidence_threshold": 0.85,
+  "alternative_slot_count": 3,
+  "fallback_model_enabled": true,
+  "logging_level": "INFO",
+  "weight_preferred_provider": 20.0,
+  "weight_back_to_back": 10.0,
+  "weight_small_gap": 5.0,
+  "weight_soonest_penalty": 0.5
+}
