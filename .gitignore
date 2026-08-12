@@ -38,3 +38,8 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Portable Git
+git-portable/
+mingit.zip
+
